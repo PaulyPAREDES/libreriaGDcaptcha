@@ -12,7 +12,7 @@
   
       $("#btn").on("click", function(){
         var formData = $("#formCaptcha").serialize();
-        var ruta = "ajax.php";
+        var ruta = "../control/ajax.php";
         $.ajax({
           url: ruta,
           type: "POST",
@@ -24,7 +24,7 @@
           });
         });
       $("#actualizarCaptcha").on("click", function(){
-        $("#imgcaptcha").attr("src","captcha.php?r=" + Math.random());
+        $("#imgcaptcha").attr("src","../control/captcha.php?r=" + Math.random());
        }); 
     });
   </script>
@@ -51,7 +51,7 @@
      <div id="respuesta"></div>
      <div class="mb-3">
     <!-- <img src="captchaSimple.php" alt="Imagen de captcha"> -->
-     <img src="captcha.php" id="imgcaptcha" alt="Imagen de captcha">
+     <img src="../control/captcha.php" id="imgcaptcha" alt="Imagen de captcha">
      <button type="button"  id="actualizarCaptcha" name="actualizarCaptcha" class="btn btn-secondary" >Actualizar</button>
      </div>
      <div class="d-grid mb-3 gap-2">
