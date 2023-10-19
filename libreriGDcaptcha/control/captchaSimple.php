@@ -8,13 +8,13 @@ header ("Content-type: image/png");
 /* Indicar anchura y altura de la imagen a crear  */ 
 
 $imagen = imagecreate(100, 70);
-$font= "../imagenesGD/CHERL__.ttf";
+$font= "../fuentes/Ransom.ttf";
 
 /*Definir el color de fondo de la imagen */
 /*$colorFondo = imagecolorallocate ($imagen, 0, 0, 0); color negro*/
 $colorFondo = imagecolorallocate ($imagen, 0, 0, 0);
 /*Definir el color del texto*/ 
-$colorTexto = imagecolorallocate ($imagen, 255,255, 255 );
+$colorTexto = imagecolorallocate ($imagen, random_int(50,255),random_int(50,100),random_int(70,245) );
 
 /*Generar un codigo aleatorio para que aparesca en la imagen creando la siguiente funcion*/ 
 function generaCaptcha ($caracters, $length){
@@ -35,7 +35,7 @@ $captcha =  generaCaptcha (array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "H", "m", "F", "q
  setcookie ('captcha', sha1($captcha), time()+60*1);
  /*ingresar el texto de la imagen */ 
  //imagestring($imagen, 5, 30, 25, $captcha, $colorTexto);
- imagettftext($imagen, 20,0,20,40, $colorTexto, $font, $captcha );
+ imagettftext($imagen, 30,0,random_int(10,15),random_int(30,60), $colorTexto, $font, $captcha );
  /*Imprimir la imagen*/ 
  imagepng ($imagen);
 
