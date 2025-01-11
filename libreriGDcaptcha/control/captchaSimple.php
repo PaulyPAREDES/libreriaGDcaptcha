@@ -4,11 +4,8 @@
 header ("Content-type: image/png");
 
 // usos de funciones de GD 
-
 /* Indicar anchura y altura de la imagen a crear  */ 
-
 $imagen = imagecreate(100, 70);
-$font= "../fuentes/Ransom.ttf";
 
 /*Definir el color de fondo de la imagen */
 /*$colorFondo = imagecolorallocate ($imagen, 0, 0, 0); color negro*/
@@ -31,10 +28,10 @@ function generaCaptcha ($caracters, $length){
 $captcha =  generaCaptcha (array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "H", "m", "F", "q","r", "A", "u","b"), 4);
 //$captcha = "Hola";
 /*crear la cooki para almacenar el codigo captcha y enciptar con la funcion sha1() y endicarle un tiempo*/
-
  setcookie ('captcha', sha1($captcha), time()+60*1);
  /*ingresar el texto de la imagen */ 
  //imagestring($imagen, 5, 30, 25, $captcha, $colorTexto);
+ $font= "../fuentes/Ransom.ttf";
  imagettftext($imagen, 30,0,random_int(10,15),random_int(30,60), $colorTexto, $font, $captcha );
  /*Imprimir la imagen*/ 
  imagepng ($imagen);

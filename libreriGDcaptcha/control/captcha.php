@@ -20,7 +20,6 @@ $color3 = imagecolorallocate($imagen, random_int(10,88),random_int(120,239),rand
 // Dibujar tres rectángulos, cada uno color
 imagefilledrectangle($imagen, 10, 30, random_int(50,180), random_int(80,180), $color1);
 imagefilledrectangle($imagen, 20, 100, random_int(120,180), random_int(120,180), $color2);
-//imagerectangle($imagen, 100, 120, random_int(30,180), random_int(20,180), $verde);
 imagefilledrectangle($imagen, 90, 70, random_int(80,180), random_int(90,180), $color3);
 
 /*Generar un codigo aleatorio para que aparesca en la imagen creando la siguiente funcion*/ 
