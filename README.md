@@ -7,13 +7,13 @@ Uso de la librería GD para la generación de imagen y captcha personalizado
 Deberá investigar y probar el uso (con ejemplos) de alguna librería en PHP, que
 resuelva un problema específico.
 Algunos ejemplos: 
-• Generación de código de barras. 
-• Generación de Gráficos. 
-• Exportación o importación de información a otros formatos (planillas de cálculo,
+- Generación de código de barras. 
+- Generación de Gráficos. 
+- Exportación o importación de información a otros formatos (planillas de cálculo,
 texto plano, pdf,... etc). 
-• Generación de códigos QR. 
-• Utilización de captchas. 
-• Generación de archivos comprimidos. 
+- Generación de códigos QR. 
+- Utilización de captchas. 
+- Generación de archivos comprimidos. 
 
 ## Demo Login / Registro
 
