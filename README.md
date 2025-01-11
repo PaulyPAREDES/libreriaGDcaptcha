@@ -23,7 +23,7 @@ En esta demo, realizamos un formulario simple de creacion de cuenta y inicio de 
 
 ## 🚀Tecnologias
 
-PHP
+PHP , Bootstrap , css.
 
 ## 🖥️ Previsualización
 
